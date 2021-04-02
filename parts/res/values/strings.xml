@@ -66,4 +66,9 @@
     <string name="dt2w_enable_title">Double-Tap to Wake </string>
     <string name="dt2w_enable_summary">Double-tap on lockscreen to wake device</string>
     
+    <!--  Refresh Rate    -->
+    <string name="device_specific_settings_title">Device-specific settings</string>
+    <string name="device_specific_settings_summary">Settings specific to Mi 10 Ultra</string>
+    <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
+    
 </resources>

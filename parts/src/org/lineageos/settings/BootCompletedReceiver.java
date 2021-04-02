@@ -17,6 +17,9 @@
 
 package org.lineageos.settings;
 
+import android.provider.Settings;
+import android.content.ComponentName;
+import android.content.pm.PackageManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -37,16 +40,29 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-    //Micro-Service to restore sata of dt2w on reboot
-    SharedPreferences prefs = context.getSharedPreferences(SHAREDD2TW, Context.MODE_PRIVATE);
-    try {
-        mTouchFeature = ITouchFeature.getService();
-        mTouchFeature.setTouchMode(14,prefs.getInt(SHAREDD2TW, 1));
-    } catch (Exception e) {
-        // Do nothing
-    }
+        //Micro-Service to restore sata of dt2w on reboot
+        SharedPreferences prefs = context.getSharedPreferences(SHAREDD2TW, Context.MODE_PRIVATE);
+        try {
+            mTouchFeature = ITouchFeature.getService();
+            mTouchFeature.setTouchMode(14,prefs.getInt(SHAREDD2TW, 1));
+        } catch (Exception e) {
+            // Do nothing
+        }
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
+        try {
+            // We need to reset this setting to trigger an update in display service
+            final float refreshRate = Settings.System.getFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, 120.0f);
+            Thread.sleep(500);
+            Settings.System.putFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, 120.0f);
+            Thread.sleep(500);
+            Settings.System.putFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, refreshRate);
+        } catch (Exception e) {
+            // Ignore
+        }
     }
 }
