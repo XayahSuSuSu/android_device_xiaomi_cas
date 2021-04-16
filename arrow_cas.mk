@@ -31,9 +31,9 @@ DEVICE_MAINTAINER := Xayah
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DISC="qti/qssi/qssi:11/RKQ1.200826.002/21.3.24:user/release-keys"
+    PRIVATE_BUILD_DISC="qti/qssi/qssi:11/RKQ1.200826.002/V12.5.1.0.RJJCNXM:user/release-keys"
 
-BUILD_FINGERPRINT := "qti/qssi/qssi:11/RKQ1.200826.002/21.3.24:user/release-keys"
+BUILD_FINGERPRINT := "qti/qssi/qssi:11/RKQ1.200826.002/V12.5.1.0.RJJCNXM:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
