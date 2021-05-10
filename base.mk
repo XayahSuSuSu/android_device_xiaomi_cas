@@ -64,9 +64,6 @@ CAMERA += vendor.qti.hardware.camera.device@3.5.vendor
 CAMERA += vendor.qti.hardware.camera.postproc@1.0.vendor
 CAMERA += libstdc++.vendor
 
-#DATA_OS
-DATA_OS := librmnetctl
-
 #DISPLAY
 DISPLAY += libtinyxml
 
@@ -77,13 +74,7 @@ DRM += android.hardware.drm@1.3-service.clearkey
 FASTBOOTD += fastbootd
 
 #FOD
-FOD := vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_kona
-
-#framework detect libs
-PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
-PRODUCT_PACKAGES += libqti_vndfwk_detect
-PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
-PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
+FOD := vendor.aospa.biometrics.fingerprint.inscreen@1.0-service
 
 #HEALTH
 HEALTH += android.hardware.health@2.1-impl
@@ -91,21 +82,9 @@ HEALTH += android.hardware.health@2.1-service
 
 #HIDL
 HIDL += libhwbinder.vendor
-HIDL += android.hidl.base@1.0
-HIDL += android.hidl.base@1.0.vendor
-HIDL += android.hidl.manager@1.0
-HIDL += android.hidl.manager@1.0.vendor
-
-#HIDL_WRAPPER
-HIDL_WRAPPER := qti-telephony-hidl-wrapper
-HIDL_WRAPPER += qti_telephony_hidl_wrapper.xml
 
 #HOSTAPD
 HOSTAPD := hostapd
-
-#IMS Extension module for Android Telephony
-IMS_EXT := ims-ext-common
-IMS_EXT += ims_ext_common.xml
 
 #IPACM
 IPACM += ipacm
@@ -173,16 +152,6 @@ NFC += SecureElement
 NFC += Tag
 NFC += vendor.nxp.hardware.nfc@2.0-service
 
-#POWERSHARE
-POWERSHARE := vendor.lineage.powershare@1.0-service.xiaomi_kona
-
-#QMI
-QMI := libjson
-
-#QTI_TELEPHONY_UTILS
-QTI_TELEPHONY_UTILS += qti-telephony-utils
-QTI_TELEPHONY_UTILS += qti_telephony_utils.xml
-
 #RCS
 RCS += rcs_service_aidl
 RCS += rcs_service_aidl.xml
@@ -199,15 +168,8 @@ SENSOR += android.hardware.sensors@1.0-impl
 SENSOR += android.hardware.sensors@1.0-service
 SENSOR += libsensorndkbridge
 
-#TELEPHONY_EXT
-TELEPHONY_EXT += telephony-ext
-TELEPHONY_EXT_JAR += telephony-ext
-
 #THERMAL_HAL
 THERMAL_HAL := android.hardware.thermal@2.0-service.qti
-
-#USB
-USB := android.hardware.usb@1.2-service-qti
 
 #WIFI
 WIFI += android.hardware.wifi@1.0-service
@@ -217,17 +179,9 @@ WIFI += libwifi-hal-qcom
 WIFI += vendor.qti.hardware.wifi.hostapd@1.2.vendor
 WIFI += vendor.qti.hardware.wifi.supplicant@2.1.vendor
 
-#WFD
-MM_WFD += libwfdaac
-MM_WFD += libwfdaac_vendor
-MM_WFD += libnl
-
 #WPA
 WPA += wpa_supplicant.conf
 WPA += wpa_supplicant
-
-#XIAOMIPARTS
-XIAOMIPARTS := XiaomiParts
 
 #LLVM for RenderScript
 #use qcom LLVM
@@ -244,7 +198,6 @@ PRODUCT_PACKAGES += $(BLUETOOTH_HAL)
 PRODUCT_PACKAGES += $(CAMERA)
 PRODUCT_PACKAGES += $(C2DCC)
 PRODUCT_PACKAGES += $(RCS)
-PRODUCT_PACKAGES += $(DATA_OS)
 PRODUCT_PACKAGES += $(DISPLAY)
 PRODUCT_PACKAGES += $(DRM)
 PRODUCT_PACKAGES += $(FASTBOOTD)
@@ -252,7 +205,6 @@ PRODUCT_PACKAGES += $(FOD)
 PRODUCT_PACKAGES += $(HEALTH)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(HIDL)
-PRODUCT_PACKAGES += $(HIDL_WRAPPER)
 PRODUCT_PACKAGES += $(IR)
 PRODUCT_PACKAGES += $(LIB_XML2)
 PRODUCT_PACKAGES += $(LIBMEMTRACK)
@@ -263,24 +215,15 @@ PRODUCT_PACKAGES += $(LIBPOWER)
 PRODUCT_PACKAGES += $(MEDIA)
 PRODUCT_PACKAGES += $(MM_AUDIO)
 PRODUCT_PACKAGES += $(MM_CORE)
-PRODUCT_PACKAGES += $(MM_WFD)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 PRODUCT_PACKAGES += $(NET)
 PRODUCT_PACKAGES += $(NFC)
-PRODUCT_PACKAGES += $(POWERSHARE)
-PRODUCT_PACKAGES += $(QMI)
-PRODUCT_PACKAGES += $(QTI_TELEPHONY_UTILS)
 PRODUCT_PACKAGES += $(RIL)
 PRODUCT_PACKAGES += $(SENSOR)
-PRODUCT_PACKAGES += $(TELEPHONY_EXT)
-PRODUCT_BOOT_JARS += $(TELEPHONY_EXT_JAR)
 PRODUCT_PACKAGES += $(THERMAL_HAL)
-PRODUCT_PACKAGES += $(USB)
 PRODUCT_PACKAGES += $(WIFI)
 PRODUCT_PACKAGES += $(WPA)
-PRODUCT_PACKAGES += $(XIAOMIPARTS)
 PRODUCT_PACKAGES += $(IPACM)
-PRODUCT_PACKAGES += $(IMS_EXT)
 
 # MSM updater library
 PRODUCT_PACKAGES += librecovery_updater_msm
@@ -294,24 +237,20 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     perf \
     telephony \
-    wfd
+    wfd \
+    usb
 
 PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml\
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml\
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
@@ -368,15 +307,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml
 
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES+= \
-    ro.adb.secure=1
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    vendor.usb.diag.func.name=diag
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcomsysd.enabled=1
