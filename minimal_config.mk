@@ -60,7 +60,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/xiaomi/umi/device/overlay \
     device/xiaomi/umi/product/overlay \
     device/xiaomi/umi/overlay \
-    device/xiaomi/umi/overlay-404
+    device/xiaomi/umi/overlay-pa
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
