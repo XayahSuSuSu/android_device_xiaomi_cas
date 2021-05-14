@@ -26,6 +26,13 @@ TARGET_NO_KERNEL := false
 
 USE_OPENGL_RENDERER := true
 
+
+DEVICE_MANIFEST_FILE := device/xiaomi/umi/vintf/manifest.xml
+DEVICE_MATRIX_FILE   := device/xiaomi/umi/vintf/compatibility_matrix.xml
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/xiaomi/umi//vintf/xiaomi_vendor_framework_compatibility_matrix.xml
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := device/xiaomi/umi/config.fs
 

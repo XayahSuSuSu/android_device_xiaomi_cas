@@ -210,9 +210,6 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 PRODUCT_PACKAGES += fs_config_files
 
-DEVICE_MANIFEST_FILE := device/xiaomi/umi/manifest.xml
-DEVICE_MATRIX_FILE   := device/xiaomi/umi/compatibility_matrix.xml
-
 #MIDI feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
