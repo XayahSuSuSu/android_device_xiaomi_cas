@@ -100,10 +100,6 @@ IR += android.hardware.ir@1.0-service
 #LIBLIGHTS
 LIBLIGHTS += lights.kona
 
-#LIBPOWER -- Add HIDL Packages
-LIBPOWER += android.hardware.power-service
-LIBPOWER += android.hardware.power-impl
-
 #LIB_XML2
 LIB_XML2 := libxml2
 
