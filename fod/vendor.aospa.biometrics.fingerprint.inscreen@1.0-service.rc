@@ -1,4 +1,4 @@
-service fingerprint-inscreen-1-0 /vendor/bin/hw/vendor.aospa.biometrics.fingerprint.inscreen@1.0-service
+service fingerprint-inscreen-1-0 /system_ext/bin/hw/vendor.aospa.biometrics.fingerprint.inscreen@1.0-service
     interface vendor.aospa.biometrics.fingerprint.inscreen@1.0::IFingerprintInscreen default
     class hal
     user system
