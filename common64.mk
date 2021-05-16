@@ -18,13 +18,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
-# whitelisted app
-PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
-
-PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
-
 #copy telephony app's permissions
 PRODUCT_COPY_FILES += vendor/qcom/common/telephony/proprietary/product/etc/permissions/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml
 
