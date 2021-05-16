@@ -21,7 +21,7 @@
     <dimen name="rounded_corner_content_padding">49.5px</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
-    <dimen name="status_bar_padding_top">1dp</dimen>
+    <dimen name="status_bar_padding_top">8dp</dimen>
 
     <!-- Bottom margin size when fingerprint in display is active -->
     <dimen name="keyguard_indication_margin_bottom">30dp</dimen>
