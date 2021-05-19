@@ -1,26 +1,26 @@
-Copyright (C) 2021 Project 404
+Copyright (C) 2021
 
-Device configuration for Xiaomi MI 10
+Device configuration for Xiaomi MI 10 Ultra
 =========================================
 
-The Xiaomi MI 10 (codenamed _"umi"_) is a high-end smartphone from Xiaomi.
+The Xiaomi MI 10 Ultra (codenamed _"cas"_) is a high-end smartphone from Xiaomi.
 
-It was announced on February 2020. Release date was February 2020.
+It was announced on August 2020. Release date was August 2020.
 
 ## Device specifications
 
 Basic   | Spec Sheet
 -------:|:-------------------------
 SoC     | Qualcomm SDM865 Snapdragon 865
-CPU     | Octa-core (2.84 GHz Kryo 485 & 2.42GHz Kryo 485 & 1.8GHz Kryo 485)
+CPU     | Octa-core (1x2.84 GHz Kryo 585 & 3x2.42 GHz Kryo 585 & 4x1.80 GHz Kryo 585)
 GPU     | Adreno 650
-Memory  | 6/8 GB RAM
-Shipped Android Version | 10.0 with MIUI 11
-Storage | 128/256 GB
-Battery | Non-removable Li-Po 4500 mAh battery
-Display | 1080 x 2340 pixels, 19.5:9 ratio, 6.67 inches, AMOLED HDR10+
-Camera  | 108MP(Primary) 20MP(Ultra-wide) 12MP(Telephoto 2x Optical Zoom) 8MP(Telephoto 5x Hybrid zoom)
+Memory  | 8/12/16 GB RAM
+Shipped Android Version | 10.0 with MIUI 12
+Storage | 128/256/512 GB
+Battery | Li-Ion 4500 mAh, non-removable, graphene-enhanced
+Display | 1080 x 2340 pixels, 19.5:9 ratio, 6.67 inches, OLED, 1B colors, 120Hz, HDR10+, 800 nits
+Camera  | 48MP(wide) 48MP(Periscope Telephoto) 20MP(Ultra-wide) 12MP(Telephoto 2x Optical Zoom) 8MP(Telephoto 5x Hybrid zoom)
 
 ## Device picture
 
-![Xiaomi MI 10 5G ](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi-10-pro-5g-1.jpg "Xiaomi MI 10 5G")
+![Xiaomi MI 10 Ultra 5G ](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi10-ultra-11.jpg "Xiaomi MI 10 Ultra 5G")

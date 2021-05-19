@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=umi
+DEVICE=cas
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2020

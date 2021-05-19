@@ -47,18 +47,18 @@ INIT += ueventd.qcom.rc
 PRODUCT_PACKAGES += $(INIT)
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    device/xiaomi/cas/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    device/xiaomi/umi/rootdir/bin/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh
+    device/xiaomi/cas/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
+    device/xiaomi/cas/rootdir/bin/init.recovery.qcom.sh:recovery/root/init.recovery.qcom.sh
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/xiaomi/umi/device/overlay \
-    device/xiaomi/umi/product/overlay \
-    device/xiaomi/umi/overlay \
-    device/xiaomi/umi/overlay-pa
+    device/xiaomi/cas/device/overlay \
+    device/xiaomi/cas/product/overlay \
+    device/xiaomi/cas/overlay \
+    device/xiaomi/cas/overlay-pa
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -66,4 +66,4 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi
 
 # Properties
-TARGET_SYSTEM_PROP += device/xiaomi/umi/system.prop
+TARGET_SYSTEM_PROP += device/xiaomi/cas/system.prop

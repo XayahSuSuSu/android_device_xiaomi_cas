@@ -27,11 +27,11 @@ TARGET_NO_KERNEL := false
 USE_OPENGL_RENDERER := true
 
 
-DEVICE_MANIFEST_FILE := device/xiaomi/umi/vintf/manifest.xml
+DEVICE_MANIFEST_FILE := device/xiaomi/cas/vintf/manifest.xml
 DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/xiaomi/umi//vintf/xiaomi_vendor_framework_compatibility_matrix.xml
+    device/xiaomi/cas//vintf/xiaomi_vendor_framework_compatibility_matrix.xml
 
 #Generate DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -94,11 +94,11 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
-KERNEL_DEFCONFIG := umi_defconfig
+KERNEL_DEFCONFIG := cas_defconfig
 TARGET_KERNEL_VERSION := 4.19
 
 # Prebuilt DTB
-TARGET_PREBUILT_DTB := device/xiaomi/umi/prebuilt/dtb
+TARGET_PREBUILT_DTB := device/xiaomi/cas/prebuilt/dtb
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_INCLUDE_DTB_IN_BOOTIMG :=
 
@@ -124,7 +124,7 @@ AUDIO_FEATURE_ENABLED_A2DP_OFFLOAD := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 TARGET_USE_QTI_BT_STACK := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/umi/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/cas/bluetooth/include
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
@@ -144,18 +144,18 @@ TARGET_PD_SERVICE_ENABLED := true
 TARGET_PER_MGR_ENABLED := true
 
 # FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/umi:libfod_extension.kona
+TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/cas:libfod_extension.kona
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := device/xiaomi/umi/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/xiaomi/cas/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/cmi
+TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/cas
 
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
@@ -188,9 +188,9 @@ BUILD_BROKEN_USES_BUILD_HOST_STATIC_LIBRARY := true
 BUILD_BROKEN_USES_BUILD_HOST_EXECUTABLE := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/umi/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/umi/sepolicy/public
-BOARD_SEPOLICY_DIRS += device/xiaomi/umi/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/cas/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/cas/sepolicy/public
+BOARD_SEPOLICY_DIRS += device/xiaomi/cas/sepolicy/vendor
 
 # Inherit proprietary blobs
--include vendor/xiaomi/umi/BoardConfigVendor.mk
+-include vendor/xiaomi/cas/BoardConfigVendor.mk

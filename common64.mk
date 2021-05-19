@@ -1,6 +1,6 @@
-$(call inherit-product, device/xiaomi/umi/base.mk)
-$(call inherit-product, device/xiaomi/umi/kona.mk)
-$(call inherit-product, device/xiaomi/umi/minimal_config.mk)
+$(call inherit-product, device/xiaomi/cas/base.mk)
+$(call inherit-product, device/xiaomi/cas/kona.mk)
+$(call inherit-product, device/xiaomi/cas/minimal_config.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -16,7 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fstab
 PRODUCT_COPY_FILES += \
-    device/xiaomi/umi/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+    device/xiaomi/cas/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 #copy telephony app's permissions
 PRODUCT_COPY_FILES += vendor/qcom/common/telephony/proprietary/product/etc/permissions/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml
