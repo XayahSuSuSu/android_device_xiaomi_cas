@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from umi MIUI 12.5.3
+# All unpinned blobs below are extracted from cas MIUI V12.5.1.0.RJJCNXM
 
 # ACDB
 vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
@@ -170,41 +170,31 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
-vendor/lib64/camera/com.qti.actuator.umi_dw9800_ov16e10.so
-vendor/lib64/camera/com.qti.actuator.umi_gc021m1_macro_dw9714.so
+vendor/lib64/camera/com.qti.actuator.cas_ofilm_ultra_dw9800.so
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
-vendor/lib64/camera/com.qti.eeprom.umi_s5k3t2_gt24p64_sunny.so
-vendor/lib64/camera/com.qti.eeprom.umi_semco_m24c128x_s5khmx.so
-vendor/lib64/camera/com.qti.eeprom.umi_sunny_gc02m1_depth_otp.so
-vendor/lib64/camera/com.qti.eeprom.umi_sunny_gc02m1_gt24p64_macro.so
-vendor/lib64/camera/com.qti.eeprom.umi_sunny_gt24p64b_ov13b10.so
+vendor/lib64/camera/com.qti.eeprom.cas_ofilm_imx350_gt24p64b.so
+vendor/lib64/camera/com.qti.eeprom.cas_semco_imx586_sem1215.so
+vendor/lib64/camera/com.qti.eeprom.cas_semco_ov48c_m24c64x.so
+vendor/lib64/camera/com.qti.eeprom.cas_semco_s5k2l7_m24c64x_tele2x.so
+vendor/lib64/camera/com.qti.eeprom.cas_sunny_s5k3t2_gt24p64.so
 vendor/lib64/camera/com.qti.eeprom.umi_sunny_s5k5e8yx_depth.so
+vendor/lib64/camera/com.qti.sensor.cas_imx586.so
+vendor/lib64/camera/com.qti.sensor.imx350_cas.so
 vendor/lib64/camera/com.qti.sensor.imx563.so
-vendor/lib64/camera/com.qti.sensor.ov13b10_umi.so
-vendor/lib64/camera/com.qti.sensor.ov16e10.so
-vendor/lib64/camera/com.qti.sensor.s5k3t2_umi.so
-vendor/lib64/camera/com.qti.sensor.s5khmx.so
-vendor/lib64/camera/com.qti.sensor.sunny_s5k5e8yx.so
-vendor/lib64/camera/com.qti.sensor.umi_gc02m1_depth.so
-vendor/lib64/camera/com.qti.sensor.umi_gc02m1_macro.so
-vendor/lib64/camera/com.qti.sensor.umi_sunny_s5k5e8yx_depth.so
-vendor/lib64/camera/com.qti.sensormodule.umi_semco_s5khmx.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_gc02m1_depth.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_gc02m1_macro.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_ov13b10.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_ov16e10.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_s5k3t2.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_s5k5e8yx_depth.bin
-vendor/lib64/camera/com.qti.sensormodule.umi_sunny_s5k5e8yx_macro.bin
+vendor/lib64/camera/com.qti.sensor.ov48c_cas.so
+vendor/lib64/camera/com.qti.sensor.s5k2l7_cas.so
+vendor/lib64/camera/com.qti.sensor.s5k3t2_cas.so
+vendor/lib64/camera/com.qti.sensormodule.cas_ofilm_imx350_ultra_wide.bin
+vendor/lib64/camera/com.qti.sensormodule.cas_semco_ov48c_wide.bin
+vendor/lib64/camera/com.qti.sensormodule.cas_semco_s5k2l7_tele2x.bin
+vendor/lib64/camera/com.qti.sensormodule.cas_semco_tele5x_imx586.bin
+vendor/lib64/camera/com.qti.sensormodule.cas_sunny_s5k3t2.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.umi_semco_s5khmx.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_gc02m1_depth.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_gc02m1_macro.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_ov13b10.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_ov16e10.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_s5k3t2.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_s5k5e8yx_depth.bin
-vendor/lib64/camera/com.qti.tuned.umi_sunny_s5k5e8yx_macro.bin
+vendor/lib64/camera/com.qti.tuned.cas_ofilm_imx350_ultra_wide.bin
+vendor/lib64/camera/com.qti.tuned.cas_semco_imx586_tele5x.bin
+vendor/lib64/camera/com.qti.tuned.cas_semco_ov48c_wide.bin
+vendor/lib64/camera/com.qti.tuned.cas_semco_s5k2l7_tele2x.bin
+vendor/lib64/camera/com.qti.tuned.cas_sunny_s5k3t2.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
@@ -460,8 +450,9 @@ vendor/etc/camera/vidhance_calibration
 
 # Camera-firmware
 vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/umi_ois.coeff
-vendor/firmware/umi_ois.prog
+vendor/firmware/cas_tele5x_sem1215_ois.prog
+vendor/firmware/cas_wide_ois.coeff
+vendor/firmware/cas_wide_ois.prog
 
 # Camera-configs
 vendor/etc/public.libraries.txt
