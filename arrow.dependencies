@@ -6,5 +6,11 @@
   {
     "repository": "android_packages_apps_GCamGOPrebuilt",
     "target_path": "packages/apps/GCamGOPrebuilt"
+  },
+  {
+    "remote": "github",
+    "repository": "https://github.com/XayahSuSuSu/android_kernel_xiaomi_sm8250",
+    "target_path": "kernel/xiaomi/sm8250",
+    "revision": "lineage-18.1"
   }
 ]
